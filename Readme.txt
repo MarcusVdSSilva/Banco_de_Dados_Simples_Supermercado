@@ -22,14 +22,16 @@ use Supermercado_A3;
 
 create table `cliente` (
 `id` int primary key not null auto_increment,
-`nome` varchar(45) not null,
-`email` varchar(45) not null unique,
+`nome` varchar(100) not null,
+`email` varchar(100) not null unique,
+`senha` varchar(50) not null,
 `cpf` varchar(11) not null unique,
 `telefone` varchar(15) not null,
-`rua` varchar(45) not null,
-`bairro` varchar(45) not null,
-`cidade` varchar(45) not null,
-`cep` varchar(8) not null
+`rua` varchar(100) not null,
+`bairro` varchar(100) not null,
+`cidade` varchar(100) not null,
+`cep` varchar(8) not null,
+`saldo` float not null
 );
 
 create table `pedido`(
@@ -47,21 +49,23 @@ create table `categoria`(
 
 create table `funcionario` (
 `id` int primary key not null auto_increment,
-`nome` varchar(45) not null,
-`email` varchar(45) not null unique,
+`nome` varchar(100) not null,
+`email` varchar(100) not null unique,
+`senha` varchar(50) not null,
 `cpf` varchar(11) not null unique,
 `telefone` varchar(15) not null,
-`rua` varchar(45) not null,
-`bairro` varchar(45) not null,
-`cidade` varchar(45) not null,
+`rua` varchar(100) not null,
+`bairro` varchar(100) not null,
+`cidade` varchar(100) not null,
 `cep` varchar(8) not null,
+`salario` float not null,
 `id_categoria` int,
 foreign key (`id_categoria`) references `categoria`(`id`) 
 );
 
 create table `produto`(
 `id` int primary key not null auto_increment,
-`nome` varchar(45) not null,
+`nome` varchar(100) not null,
 `preco` float not null,
 `id_categoria` int,
 `id_funcionario` int,
