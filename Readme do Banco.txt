@@ -8,8 +8,8 @@ Ordem da Criação:
 2- use Database
 3- table Cliente
 4- table Pedido
-5- table categoria
-6- table funcionario
+5- table funcionario
+6- table categoria
 7- table produto
 8- table produto_pedido
 
@@ -42,11 +42,6 @@ create table `pedido`(
 foreign key (`id_cliente`) references `cliente`(`id`)
 );
 
-create table `categoria`(
-`id` int primary key not null auto_increment,
-`nome` varchar(45) not null unique
-);
-
 create table `funcionario` (
 `id` int primary key not null auto_increment,
 `nome` varchar(100) not null,
@@ -58,9 +53,14 @@ create table `funcionario` (
 `bairro` varchar(100) not null,
 `cidade` varchar(100) not null,
 `cep` varchar(8) not null,
-`salario` float not null,
-`id_categoria` int,
-foreign key (`id_categoria`) references `categoria`(`id`) 
+`salario` float not null
+);
+
+create table `categoria`(
+`id` int primary key not null auto_increment,
+`nome` varchar(45) not null unique,
+`id_funcionario` int,
+foreign key (`id_funcionario`) references `funcionario`(`id`) 
 );
 
 create table `produto`(

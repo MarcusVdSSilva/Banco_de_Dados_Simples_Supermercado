@@ -1,2 +1,2 @@
 	Projeto proposto em sala na faculdade, com o objetivo de realizar um sistema em Java que tivesse integração com banco de dados e que fosse funcional.
- Apresenta um sistema funcional de um supermercado online, com funcionário, clientes e produtos. Possui sistema de cadastramento e login. 
+ Apresenta um sistema funcional de um supermercado online, com funcionários, clientes e produtos. Possui sistema de cadastro e login.
