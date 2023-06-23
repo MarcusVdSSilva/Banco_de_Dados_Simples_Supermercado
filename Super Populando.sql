@@ -43,4 +43,25 @@ values
 
 insert into produto (nome, preco, id_categoria, id_funcionario)
 values
-(''),
+('Veja 5L', '22.00', '1', '1'),
+('Fone Headset', '200.00', '4', '2'),
+('Buzz Leighter', '150.00', '2', '3'),
+('Coleira de ferro', '60.99', '5', '4'),
+('Vinho', '80.35', '3', '5'),
+('Barbie', '70.55', '2', '3'),
+('Balde', '45.50', '1', '1'),
+('Queijo 1kg', '52.20',  '3', '5');
+
+insert into produto_pedido (quantidade, id_produto, id_pedido)
+values 
+('1','3','8'),
+('1','2','9'),
+('1','3','10'),
+('1','4','11'),
+('1','5','12'),
+('1','6','13'),
+('1','7','14'),
+('1','8','15'),
+('1','1','16'),
+('1','4','17'),
+('1','5','18');
