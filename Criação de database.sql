@@ -50,6 +50,7 @@ create table `produto`(
 `id` int primary key not null auto_increment,
 `nome` varchar(100) not null,
 `preco` float not null,
+`quantidade_estoque` int not null,
 `id_categoria` int,
 `id_funcionario` int,
 foreign key (`id_categoria`) references `categoria`(id),
