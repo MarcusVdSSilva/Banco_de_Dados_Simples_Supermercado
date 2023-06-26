@@ -41,16 +41,16 @@ values
 ('eletrônicos', '4'),
 ('Pet', '5');
 
-insert into produto (nome, preco, id_categoria, id_funcionario)
+insert into produto (nome, preco, id_categoria, id_funcionario, quantidade_estoque)
 values
-('Veja 5L', '22.00', '1', '1'),
-('Fone Headset', '200.00', '4', '2'),
-('Buzz Leighter', '150.00', '2', '3'),
-('Coleira de ferro', '60.99', '5', '4'),
-('Vinho', '80.35', '3', '5'),
-('Barbie', '70.55', '2', '3'),
-('Balde', '45.50', '1', '1'),
-('Queijo 1kg', '52.20',  '3', '5');
+('Veja 5L', '22.00', '1', '1', '50'),
+('Fone Headset', '200.00', '4', '2', '50'),
+('Buzz Leighter', '150.00', '2', '3', '100'),
+('Coleira de ferro', '60.99', '5', '4', '20'),
+('Vinho', '80.35', '3', '5', 30),
+('Barbie', '70.55', '2', '3', 40),
+('Balde', '45.50', '1', '1', 50),
+('Queijo 1kg', '52.20',  '3', '5', 100);
 
 insert into produto_pedido (quantidade, id_produto, id_pedido)
 values 
